@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Muslim Students Board — Nowgam, Srinagar</title>
+  <meta name="description" content="Muslim Students Board Nowgam Srinagar — About, Activities, Gallery, Contact">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --sky:#bfe9ff; /* light sky blue */
+      --mint:#c8f2d6; /* light green */
+      --accent:#2b9bd2; /* darker sky */
+      --accent-2:#32b28d; /* darker green */
+      --muted:#5a6b74;
+      --card:#ffffff;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,var(--sky),var(--mint));color:#033047}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+    /* Header / Navbar */
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(90deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(3,48,71,0.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{padding:8px 12px;border-radius:8px;font-weight:600;color:var(--muted)}
+    nav a.active{background:rgba(3,48,71,0.06);color:var(--accent)}
+    .cta{background:var(--accent);color:white;padding:8px 14px;border-radius:8px;font-weight:700}
+    .hamburger{display:none;background:transparent;border:0;font-size:26px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 480px;gap:28px;align-items:center;padding:48px 0}
+    .hero h1{margin:0;font-size:30px}
+    .hero p{color:var(--muted);margin:8px 0 18px}
+    .hero .image{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-radius:12px;overflow:hidden;min-height:260px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .hero .image img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* Tabs section */
+    .tabs{margin-top:18px;background:rgba(255,255,255,0.8);padding:16px;border-radius:12px;box-shadow:0 8px 28px rgba(3,48,71,0.06)}
+    .tabs .tab-buttons{display:flex;gap:8px;flex-wrap:wrap}
+    .tabs button{background:transparent;border:1px solid rgba(3,48,71,0.06);padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600;color:var(--muted)}
+    .tabs button.active{background:linear-gradient(90deg,var(--sky),var(--mint));border-color:transparent;color:var(--accent)}
+    .tab-content{margin-top:14px}
+
+    /* Grid */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(3,48,71,0.04)}
+
+    footer{padding:26px 0;color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      nav ul{display:none}
+      .hamburger{display:block}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      .grid-3{grid-template-columns:1fr}
+      .hero h1{font-size:22px}
+      .logo{width:40px;height:40px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">MSB</div>
+        <div>
+          <div style="font-weight:700">Muslim Students Board</div>
+          <div style="font-size:12px;color:var(--muted)">Nowgam, Srinagar</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <a class="cta" href="#join">Join</a>
+        <button class="hamburger" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div>
+        <h1>Welcome to Muslim Students Board — Nowgam, Srinagar</h1>
+        <p>We empower students through community programs, academic support and cultural activities. Join us to learn, lead and serve.</p>
+
+        <div class="tabs" role="tablist" aria-label="Quick tabs">
+          <div class="tab-buttons" role="toolbar">
+            <button data-tab="overview" class="active">Overview</button>
+            <button data-tab="goals">Goals</button>
+            <button data-tab="events">Events</button>
+            <button data-tab="gallery">Gallery</button>
+          </div>
+
+          <div class="tab-content" id="tabContent">
+            <div data-panel="overview">
+              <p class="muted">MSB Nowgam is dedicated to student welfare, cultural preservation and academic enrichment. We run mentoring sessions, scholarships, and community outreach throughout the year.</p>
+            </div>
+            <div data-panel="goals" style="display:none">
+              <ul>
+                <li>Provide academic guidance and resources</li>
+                <li>Promote cultural & social activities</li>
+                <li>Support student careers and leadership</li>
+              </ul>
+            </div>
+            <div data-panel="events" style="display:none">
+              <p class="muted">Regular events include study camps, cultural nights, seminars and community aid programs involving students and local partners.</p>
+            </div>
+            <div data-panel="gallery" style="display:none">
+              <div class="grid-3">
+                <div class="card"><img src="https://source.unsplash.com/collection/190727/400x250" alt="event" style="width:100%;height:120px;object-fit:cover;border-radius:8px"></div>
+                <div class="card"><img src="https://source.unsplash.com/collection/190728/400x250" alt="event" style="width:100%;height:120px;object-fit:cover;border-radius:8px"></div>
+                <div class="card"><img src="https://source.unsplash.com/collection/190729/400x250" alt="event" style="width:100%;height:120px;object-fit:cover;border-radius:8px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="image" aria-hidden="false">
+        <!-- Replace with your image: use an <img> with src or background-image -->
+        <img src="https://source.unsplash.com/featured/?students,srinagar" alt="MSB image">
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:12px">
+      <div class="card">
+        <h2>About MSB Nowgam</h2>
+        <p class="muted">Founded to represent and support the student community of Nowgam and nearby areas, the Muslim Students Board organizes academic help, social services and cultural events while fostering leadership among youth.</p>
+      </div>
+    </section>
+
+    <section id="activities" style="margin-top:12px">
+      <h2>Activities</h2>
+      <div class="grid-3" style="margin-top:10px">
+        <div class="card">
+          <h4>Study Circles</h4>
+          <p class="muted">Peer-led study groups and tutoring for board & university exams.</p>
+        </div>
+        <div class="card">
+          <h4>Cultural Nights</h4>
+          <p class="muted">Celebrations of local music, poetry and arts.</p>
+        </div>
+        <div class="card">
+          <h4>Community Service</h4>
+          <p class="muted">Health drives, literacy camps and local outreach activities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:14px">
+      <div class="card">
+        <h2>Contact</h2>
+        <p class="muted">Email: info@msbnowgam.in | Phone: +91-xxx-xxx-xxxx</p>
+        <p class="muted">Address: Nowgam, Srinagar — Please replace with the official address.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="margin:10px 0;text-align:center;color:var(--muted)">&copy; Muslim Students Board Nowgam Srinagar</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn.addEventListener('click', ()=>{
+      const ul = document.querySelector('nav ul');
+      if(!ul) return;
+      const visible = ul.style.display === 'flex';
+      ul.style.display = visible ? 'none' : 'flex';
+      ul.style.flexDirection = 'column';
+      ul.style.position = 'absolute';
+      ul.style.right = '20px';
+      ul.style.top = '64px';
+      ul.style.background = 'rgba(255,255,255,0.95)';
+      ul.style.padding = '14px';
+      ul.style.borderRadius = '10px';
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(!href || href === '#') return;
+        const target = document.querySelector(href);
+        if(!target) return;
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth',block:'start'});
+        const ul = document.querySelector('nav ul');
+        if(ul && window.innerWidth < 980) ul.style.display = 'none';
+      });
+    });
+
+    // Tabs behavior
+    document.querySelectorAll('.tabs .tab-buttons button').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        document.querySelectorAll('.tabs .tab-buttons button').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const tab = btn.getAttribute('data-tab');
+        document.querySelectorAll('[data-panel]').forEach(p=>p.style.display = p.getAttribute('data-panel') === tab ? '' : 'none');
+      });
+    });
+  </script>
+</body>
+</html>
