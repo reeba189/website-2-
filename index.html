@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cluster University Srinagar — Landing Page</title>
+  <meta name="description" content="Cluster University Srinagar — History, Activities, Courses, Admissions & Contact" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f5f8ff;--card:#ffffff;--accent:#0b5f9a;--accent-2:#1fb6ff;--muted:#6b7280;--radius:12px;--max:1100px}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;height:100%;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,var(--bg),#eef6ff);color:#0b1320}
+    a{color:inherit}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;position:sticky;top:0;z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .logo{width:48px;height:48px;border-radius:10px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-family:'Merriweather',serif}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:white;text-decoration:none;font-weight:600}
+    .cta{background:rgba(255,255,255,0.12);padding:8px 14px;border-radius:999px;font-weight:700}
+    .hamburger{display:none;background:transparent;border:0;color:white;font-size:24px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:56px 0}
+    .hero h1{font-size:36px;line-height:1.03;margin:0;font-family:'Merriweather',serif;color:#07102a}
+    .lead{color:var(--muted);margin:14px 0 20px}
+    .buttons{display:flex;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer;text-decoration:none}
+    .btn.primary{background:#fff;color:var(--accent);box-shadow:0 8px 28px rgba(11,95,154,0.08)}
+    .btn.ghost{background:transparent;border:1px solid rgba(11,95,154,0.12);color:var(--accent-2)}
+
+    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 10px 30px rgba(11,18,32,0.06)}
+    .stats{display:flex;gap:12px;margin-top:18px}
+    .stat{flex:1;text-align:center}
+    .stat h3{margin:0;color:var(--accent)}
+    .stat p{margin:8px 0 0;color:var(--muted);font-size:14px}
+
+    /* Sections */
+    section{padding:44px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .activities .item{display:flex;gap:12px;align-items:flex-start}
+    .avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .courses ul{list-style:none;padding:0;margin:0}
+    .courses li{padding:12px;border-radius:10px;border:1px solid #eef4fb;margin-bottom:10px}
+
+    footer{padding:28px 0;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      nav ul{display:none}
+      .hamburger{display:block}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      .grid-3{grid-template-columns:1fr}
+      .hero{padding:28px 0}
+      .hero h1{font-size:26px}
+      .logo{width:40px;height:40px}
+    }
+
+    /* small utils */
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">CUS</div>
+        <div>
+          Cluster University<br><small style="opacity:.9;font-weight:600">Srinagar</small>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#history">History</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <a class="cta" href="#admissions">Admissions</a>
+        <button class="hamburger" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div>
+        <h1 id="hero-heading">Education. Research. Culture. — Cluster University Srinagar</h1>
+        <p class="lead">Cluster University Srinagar (CUS) connects colleges, scholars and communities to create a collaborative, student-centered campus that promotes research, innovation and cultural heritage.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#admissions">Apply Now</a>
+          <a class="btn ghost" href="#courses">Explore Programs</a>
+        </div>
+
+        <div class="stats" role="list">
+          <div class="stat" role="listitem"><h3>6+</h3><p>Affiliated Colleges</p></div>
+          <div class="stat" role="listitem"><h3>100+</h3><p>Programs</p></div>
+          <div class="stat" role="listitem"><h3>10k+</h3><p>Students</p></div>
+        </div>
+      </div>
+
+      <aside class="card" aria-labelledby="welcome">
+        <h3 id="welcome" style="margin-top:0">Welcome to CUS</h3>
+        <p class="muted">CUS was created to unify academic strengths across the region and provide students with multidisciplinary opportunities, modern facilities and strong community links.</p>
+        <div style="margin-top:14px" class="center"><a class="btn primary" href="#history">Read our story</a></div>
+      </aside>
+    </section>
+
+    <section id="history">
+      <div class="card">
+        <h2>History</h2>
+        <p class="muted">Cluster University Srinagar was founded to consolidate academic resources and enhance higher education delivery in the Kashmir valley. Over the years, the university has grown through partnerships with regional colleges, research initiatives and public engagement programs.</p>
+        <p class="muted">CUS blends traditional values and local culture with modern curricula and international best practices to prepare graduates for both local impact and global opportunities.</p>
+      </div>
+    </section>
+
+    <section id="activities" class="activities">
+      <h2>Activities & Student Life</h2>
+      <div class="grid-3" style="margin-top:14px">
+        <div class="card">
+          <div class="item">
+            <div class="avatar">R</div>
+            <div>
+              <h4>Research & Innovation</h4>
+              <p class="muted">Interdisciplinary research centers, funded projects and student-led symposiums encourage innovation in sciences, arts and technology.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="item">
+            <div class="avatar">C</div>
+            <div>
+              <h4>Clubs & Culture</h4>
+              <p class="muted">Cultural festivals, music, theater and student clubs celebrate the vibrant heritage of Jammu & Kashmir and provide leadership opportunities.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="item">
+            <div class="avatar">O</div>
+            <div>
+              <h4>Outreach & Community</h4>
+              <p class="muted">Community engagement programs, literacy drives and extension services connect students with local communities for public benefit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="courses">
+      <h2>Courses & Programs</h2>
+      <p class="muted">CUS offers a broad spectrum of undergraduate, postgraduate and doctoral programs designed to meet academic and professional needs.</p>
+
+      <div class="card" style="margin-top:14px">
+        <ul>
+          <li><strong>B.Sc</strong> — Physics, Chemistry, Mathematics, Computer Science</li>
+          <li><strong>B.A</strong> — English, History, Political Science, Sociology</li>
+          <li><strong>B.Com</strong> — Accounting, Finance, Business Studies</li>
+          <li><strong>M.Sc</strong> — Data Science, Environmental Science</li>
+          <li><strong>M.A</strong> — Kashmir Studies, Media & Communication</li>
+          <li><strong>M.Com</strong> — Advanced Finance</li>
+          <li><strong>Ph.D</strong> — Research across multiple disciplines</li>
+        </ul>
+        <div class="center" style="margin-top:12px"><a class="btn primary" href="#admissions">View Admissions & Programs</a></div>
+      </div>
+    </section>
+
+    <section id="admissions">
+      <h2>Admissions</h2>
+      <div class="card">
+        <p class="muted">Admissions are held annually. Prospective students should check the eligibility criteria, entrance requirements and deadlines on the official admissions portal. Scholarships and financial aid are available as per university policy.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn primary" href="#">Undergraduate</a>
+          <a class="btn ghost" href="#">Postgraduate</a>
+          <a class="btn ghost" href="#">Doctoral</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & Location</h2>
+      <div class="card" style="display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+        <div style="flex:1;min-width:240px">
+          <p class="muted">Cluster University Srinagar<br>Address: [Replace with official address]<br>Phone: +91-xxx-xxx-xxxx<br>Email: info@cus.ac.in</p>
+        </div>
+        <div style="min-width:240px;flex:1">
+          <iframe title="map" src="https://www.google.com/maps?q=srinagar&output=embed" style="width:100%;height:180px;border:0;border-radius:8px" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container center">
+      <p style="margin:6px 0">&copy; <strong>Cluster University Srinagar</strong> — All rights reserved.</p>
+      <p class="muted" style="margin:0">Designed to be responsive on laptop and mobile devices.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    btn.addEventListener('click', ()=>{
+      const ul = document.querySelector('nav ul');
+      if(!ul) return;
+      const visible = ul.style.display === 'flex';
+      ul.style.display = visible ? 'none' : 'flex';
+      ul.style.flexDirection = 'column';
+      ul.style.position = 'absolute';
+      ul.style.right = '20px';
+      ul.style.top = '64px';
+      ul.style.background = 'linear-gradient(180deg, rgba(11,95,154,0.95), rgba(31,182,255,0.95))';
+      ul.style.padding = '14px';
+      ul.style.borderRadius = '10px';
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(!href || href === '#') return;
+        const target = document.querySelector(href);
+        if(!target) return;
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth',block:'start'});
+        // Close mobile menu after click
+        const ul = document.querySelector('nav ul');
+        if(ul && window.innerWidth < 980) ul.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>
